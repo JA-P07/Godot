@@ -1,0 +1,135 @@
+[gd_scene load_steps=7 format=3 uid="uid://cm0lwdg4y0i1k"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_0xdcq"]
+[ext_resource type="FontFile" uid="uid://dw513e3hsehcn" path="res://fonts/Yarndings20-Regular.ttf" id="2_i78o6"]
+[ext_resource type="FontFile" uid="uid://t1d58tp4dyce" path="res://fonts/COMICSANS.TTF" id="2_uq27e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m65lr"]
+font = ExtResource("2_i78o6")
+font_size = 200
+font_color = Color(0.129412, 0.396078, 0.294118, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fng8v"]
+font = ExtResource("2_uq27e")
+font_size = 55
+
+[sub_resource type="LabelSettings" id="LabelSettings_06vsp"]
+font = ExtResource("2_uq27e")
+font_size = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xdcq")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+color = Color(0, 0.568627, 0.447059, 1)
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "It'shthad
+ pretfthtf 
+ty stfimhh
+plefhfftfh"
+label_settings = SubResource("LabelSettings_m65lr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -173.0
+offset_top = -120.0
+offset_right = 1.0
+offset_bottom = -63.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Start"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -173.0
+offset_top = -57.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Quit game"
+
+[node name="ColorRect2" type="ColorRect" parent="quit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -877.5
+offset_top = -377.5
+offset_right = -110.5
+offset_bottom = -263.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -104.0
+offset_right = 128.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Get rich by making money"
+label_settings = SubResource("LabelSettings_fng8v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -309.0
+offset_top = -353.0
+offset_right = 309.0
+offset_bottom = -261.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "(It's very simple)"
+label_settings = SubResource("LabelSettings_06vsp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
